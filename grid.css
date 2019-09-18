@@ -1,30 +1,91 @@
+body {
+  margin: 0;
+  padding: 0;
+}
 .container {
   display: grid;
-  grid-template-columns: 3fr 1fr 4fr;
-  grid-template-rows: 100px 300px 500px;
+  height: 100vh;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  grid-template-areas: 
+    "header header header header header"
+    "sidebar content content content content"
+    "sidebar content content content content"
+    "sidebar content content content content"
+    "footer footer footer footer footer";
+  grid-gap: 20px 10px;
 }
-.test {
+.header {
+  grid-area: sidebar;
   background: black;
-  min-width: 100px;
-  min-height: 100px;
 }
-.test2 {
+.sidebar {
+  grid-area: header;
+  background: pink;
+}
+.body {
+  grid-area: content;
   background: blue;
-  min-width: 100px;
-  min-height: 100px;
 }
-.test3 {
-  background: green;
-  min-width: 100px;
-  min-height: 100px;
-}
-.test4 {
-  background: yellow;
-  min-width: 100px;
-  min-height: 100px;
-}
-.test5 {
+.footer {
+  grid-area: footer;
   background: red;
-  min-width: 100px;
-  min-height: 100px;
+}
+.gallery-container {
+  display: grid;
+  width: 100vw;
+  height: 500px;
+  /* grid-template-columns: 400px 800px 400px 200px; */
+  grid-template-columns: 2fr 4fr 2fr 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+    "supermarket restaurants spas others"
+    "hotels restaurants travel others";
+    grid-gap: 2px;
+}
+.supermarket {
+  grid-area: supermarket;
+}
+.restaurants {
+  grid-area: restaurants;
+}
+.spas {
+  grid-area: spas;
+}
+.others {
+  grid-area: others;
+}
+.hotels {
+  grid-area: hotels;
+}
+.travel {
+  grid-area: travel;
+}
+.image__wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+}
+.image__wrapper > img {
+  width: 100%;
+  height: 100%;
+}
+figcaption {
+  position: absolute;
+  font-size: 1.5em;
+  color: #ffffff;
+  bottom: 25px;
+  left: 50px;
+}
+.caption__link {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+}
+.caption__link > a {
+  color: #ffffff;
+  text-decoration: none;
 }
