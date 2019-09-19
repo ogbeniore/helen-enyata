@@ -1,0 +1,48 @@
+.container {
+  width: 700px;
+  height: 700px;
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr); */
+  /* grid-template: grid-template-rows / grif-template-columns */
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  grid-gap: 50px;
+  justify-content: center;
+  align-content: center;
+  border: 2px solid black;
+  padding: 30px;
+  margin: 30px;
+  background: yellow;
+}
+.bg-blue {
+  background: blue;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.bg-purple {
+  background: purple;
+  min-width: 50px;
+  min-height: 50px;
+}
+
+.one {
+  grid-column: 1;
+  grid-row: 1;
+}
+.two {
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+.three {
+  grid-column: 3 / 4;
+  grid-row: 1;
+}
+.four {
+  grid-column: 1;
+  grid-row: 2 / 4;
+}
+.five {
+  grid-column: 2 / 4;
+  grid-row: 2 / 3;
+}
